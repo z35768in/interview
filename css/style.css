@@ -51,6 +51,9 @@ body {
     width: 150px;
     height: 150px;
     background-color: blue;
+    background-image: url(../pics/1704164682966.jpg);
+    background-position: 0 -30px;
+    background-size: 150px;
     border-radius: 50%;
     border: 5px solid white;
     box-shadow: 0 0 5px black, 0 0 9px black;
