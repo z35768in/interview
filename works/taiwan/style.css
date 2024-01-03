@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat',"微軟正黑體", cursive;
+}
+
+header {
+    background-color: #C4C4C4;
+    width: 100%;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header h1 i {
+    font-size: 3rem;
+}
+
+h2{
+    margin-top: 2rem;
+}
+
+nav {
+    background-color: #312F2F;
+}
+
+nav ul {
+    display: flex;
+    padding-left: 1rem;
+    list-style-type: none;
+}
+
+/* flex能把子元素變成區塊元素 */
+nav li {
+    display: flex;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #C4C4C4;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
+}
+
+nav li a:hover {
+    background-color: darkblue;
+    color: bisque;
+    font-weight: bolder;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+section.container {
+    display: flex;
+}
+
+section.left,section.right {
+    padding: 2rem;
+}
+
+section.right h5 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+section.right iframe{
+    border: 3px solid lightgray;
+    border-radius: 5%;
+}
+
+.floatleft{
+    float: left;
+    padding-left: 1rem;
+}
+.floatright{float: right;}
+
+.clear{clear: both;}
+.float h1{
+    font-size: 2rem;
+}
+.myself{
+    float: left;
+}

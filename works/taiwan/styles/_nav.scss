@@ -1,0 +1,26 @@
+nav {
+    background-color: #312f2f;
+
+    ul {
+        display: flex;
+        padding-left: 2rem;
+        list-style: none;
+    }
+
+    li {
+        display: flex;
+
+        a {
+            text-decoration: none;
+            color: $font_color;
+            padding: 0.5rem 0.75rem;
+            font-style: 1.25rem;
+
+            &:hover {
+                color: bisque;
+                background-color: darkblue;
+                font-weight: bolder;
+            }
+        }
+    }
+}

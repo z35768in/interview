@@ -1,0 +1,98 @@
+$font_color : #c4c4c4;
+
+* {
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    margin-top: 2rem;
+}
+
+section {
+    &.container {
+        display: flex;
+    }
+
+    &.left {
+        padding: 2rem;
+    }
+
+    &.right {
+        padding: 2rem;
+
+        h5 {
+            font-size: 1.25rem;
+            text-align: center;
+        }
+
+        iframe {
+            border: 3px solid lightgray;
+            border-radius: 5%;
+        }
+    }
+}
+
+.floatleft {
+    float: left;
+    padding-left: 1rem;
+}
+
+.floatright {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.float h1 {
+    font-size: 2rem;
+}
+
+.myself {
+    float: left;
+}
+
+@mixin flexbox($direction:column,$alignitem){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $alignitem;
+}
+
+.link1{
+    @include flexbox(row,$alignitem:flex-start);
+}
+.link2{
+    @include flexbox($alignitem:flex-end);
+}
+
+@import "./nav";
+@import "./header";
+
+%test{
+    align-items: start;
+}
+
+.header{
+    background-color: black;
+}
+.nav{
+    font-size: 15px;
+}
+.container{
+    @extend%test;
+    @extend.header;
+    @extend.nav;
+    color: aqua;
+}
+
+$width : 500px;
+div{
+    width: $width/2;
+    font: 2/3;
+    font:(2/3);
+    height: (50+200em*2);
+}

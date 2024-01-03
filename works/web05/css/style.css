@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+    margin: 0 auto;
+    width: 1024px;
+    height: 768px;
+}
+
+.head {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    background-color: #66CCCC;
+}
+
+.logo {
+    margin-left: 123px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo,
+.logo img {
+    width: 176px;
+}
+
+.titleform {
+    display: flex;
+    align-items: flex-end;
+}
+
+.title {
+    width: 100%;
+    font-size: 36px;
+}
+
+.title span:nth-child(1) {
+    color: #FFFFFF;
+    line-height: 1.5;
+}
+
+.title span:nth-child(3) {
+    color: #2B8280;
+}
+
+.title span:nth-child(4) {
+    color: #702B82;
+}
+
+.title span:nth-child(5) {
+    color: #FF997C;
+}
+
+.title span:nth-child(6) {
+    color: #827F52;
+}
+
+.cam {
+    display: flex;
+    align-items: center;
+    margin-left: 400px;
+}
+
+.cam,
+.cam img {
+    width: 60px;
+}
+
+
+.body {
+    width: 100%;
+    height: 468px;
+    display: flex;
+    box-shadow: 0 0 3px white;
+    border: 1px solid rgb(161, 156, 156);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.lside {
+    flex-basis: 400px;
+    margin-top: 46px;
+    margin-right: 23px;
+    font-size: 36px;
+    color: #66CCCC;
+    text-align: right;
+}
+
+.lside a:hover {
+    color: #FF997C;
+    cursor: pointer;
+}
+
+.rside {
+    box-shadow: 0 0 3px white;
+    border-left: 1px solid rgb(161, 156, 156);
+    box-sizing: border-box;
+}
+
+.rside img {
+    transition: 0.5s;
+    margin-top: 46px;
+    margin-left: 15px;
+    width: 150px;
+    border: 5px solid #E7E7E7;
+}
+
+.rside img:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
+.show {
+    margin-right: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 1s;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.show i {
+    display: inline;
+    font-size: 5em;
+}
+
+.setting {
+    position: fixed;
+    width: 100px;
+    top: 10px;
+    right: 60px;
+}
+
+.gear .fa-gear {
+    transition: 1s;
+    font-size: 35px;
+}
+
+.gear .fa-gear:hover {
+    transform: rotate(360deg);
+}
+
+.scroll {
+    position: relative;
+    font-size: 5px;
+    width: 30px;
+    height: 15px;
+    background-color: rgb(161, 156, 156);
+    transition: 1s;
+    border-radius: 50px;
+    border: 1px solid #f8f8f8;
+}
+
+.scroll .button {
+    position: absolute;
+    left: -10px;
+    top: -3px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(161, 156, 156);
+    border: 1px solid #f8f8f8;
+    border-radius: 50%;
+    transition: 2s;
+}
+
+.left,
+.right {
+    border-radius: 15px;
+}
+
+.left:hover,
+.right:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.filter {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    transition: 1s;
+    background-image: linear-gradient(rgb(195, 215, 255), rgb(235, 245, 255));
+}
+
+body:has([type=checkbox]:checked) .filter {
+    background-image: linear-gradient(rgb(0, 20, 60), rgb(40, 50, 60));
+}
+
+.day {
+    background-color: white;
+}
+
+.night {
+    background-color: #0f0f0f;
+}
+
+:is(.sun, .moon) {
+    position: absolute;
+    top: -50px;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+}
+
+:is(.sun, .moon) i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.setting {
+    display: flex;
+}
+
+.setting i {
+    margin: 0 5px;
+}
+
+.setting:has(input[type=checkbox]:checked) i {
+    color: #d5d8dc;
+}
+
+.setting input[type=checkbox] {
+    width: 0;
+    height: 0;
+}
+
+.setting label {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 35px;
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.setting label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: beige;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.setting:has(input[type=checkbox]:checked) label::before {
+    left: 15px;
+}
+
+body:has([type=checkbox]:checked) .moon,
+.sun {
+    animation: rise 1s;
+    font-size: 200px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 70%);
+}
+
+body:has([type=checkbox]:checked) .sun,
+.moon {
+    font-size: 0;
+    animation: none;
+    background-image: none;
+}
+
+@keyframes rise {
+    0% {
+        top: 1080px;
+        left: 100vw;
+    }
+
+    80% {
+        top: -100px;
+        left: -50px;
+    }
+
+    100% {
+        top: -50px;
+        left: 0;
+    }
+}

@@ -1,0 +1,119 @@
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+section.container {
+  display: flex;
+}
+section.left {
+  padding: 2rem;
+}
+section.right {
+  padding: 2rem;
+}
+section.right h5 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+section.right iframe {
+  border: 3px solid lightgray;
+  border-radius: 5%;
+}
+
+.floatleft {
+  float: left;
+  padding-left: 1rem;
+}
+
+.floatright {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.float h1 {
+  font-size: 2rem;
+}
+
+.myself {
+  float: left;
+}
+
+.link1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.link2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+nav {
+  background-color: #312f2f;
+}
+nav ul {
+  display: flex;
+  padding-left: 2rem;
+  list-style: none;
+}
+nav li {
+  display: flex;
+}
+nav li a {
+  text-decoration: none;
+  color: #c4c4c4;
+  padding: 0.5rem 0.75rem;
+  font-style: 1.25rem;
+}
+nav li a:hover {
+  color: bisque;
+  background-color: darkblue;
+  font-weight: bolder;
+}
+
+header {
+  background-color: #c4c4c4;
+  width: 100%;
+  padding: 1rem;
+}
+header h1 {
+  font-style: 2.5rem;
+}
+header h1 i {
+  font-style: 2.5rem;
+}
+
+.container {
+  align-items: start;
+}
+
+.header, .container {
+  background-color: black;
+}
+
+.nav, .container {
+  font-size: 15px;
+}
+
+.container {
+  color: aqua;
+}
+
+div {
+  width: 250px;
+  font: 2/3;
+  font: 0.6666666667;
+  height: 450em;
+}/*# sourceMappingURL=style.css.map */
